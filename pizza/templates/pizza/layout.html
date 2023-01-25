@@ -1,0 +1,16 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static 'pizza/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+
+        {% block body %}
+        {% endblock %}
+
+    </body>
+</html>
