@@ -1,8 +1,59 @@
 h1 {
-    color: black;
+    color: green;
 }
 
 p {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+body {
+    background-color: brown;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 10px 5px;
+}
+
+nav > div > a {
+    color: bisque;
+    font-size: 20px;
+}
+
+#left-link {
+    margin-right: 10px;
+}
+
+main {
+    padding: 20px 0px;
+}
+
+#middle {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    background-color: bisque;
+    padding: 5px 15px;
+}
+
+#pizza-time {
+    text-align: center;
+}
+
+#description {
+    text-align: justify;
+}
+
+footer {
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer > a {
+    display: block;
 }
