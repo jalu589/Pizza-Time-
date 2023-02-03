@@ -12,7 +12,7 @@
         <nav>
             <div class="nav-left">
                 <a id="left-link" href="{% url 'index' %}">Home</a>
-                <a href="{% url 'index' %}">Menu</a>
+                <a href="{% url 'menu' %}">Menu</a>
             </div>
             <div class="nav-right">
                 {% if user.is_authenticated %}
@@ -24,7 +24,7 @@
             </div>
         </nav>
 
-        <main style="background-image: url({% static 'pizza/pizza.jpg' %});">
+        <main style="background-image: url({% static 'pizza/images/pizza.jpg' %});">
             <div id="middle">
                 {% block body %}
                 {% endblock %}

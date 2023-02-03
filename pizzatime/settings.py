@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "pizza",
-
+    "multiselectfield",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

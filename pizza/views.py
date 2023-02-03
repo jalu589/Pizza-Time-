@@ -7,12 +7,29 @@ import json
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator
-from .models import User
+from .models import User, Pizza, Salad, Beverage, IceCream, Cookie
 
 
 # Create your views here.
 def index(request):
     return render(request, "pizza/index.html")
+
+
+def menu(request):
+    pizzas = Pizza.objects.all()
+    salads = Salad.objects.all()
+    icecreams = IceCream.objects.all()
+    cookies = Cookie.objects.all()
+    menu = {
+        "pizzas": pizzas,
+        "salads": salads,
+        "icecreams": icecreams,
+        "cookies": cookies
+    }
+    print(menu)
+    return render(request, "pizza/menu.html", {
+        "menu": menu
+    })
 
 
 def login_view(request):
