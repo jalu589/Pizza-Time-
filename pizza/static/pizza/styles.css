@@ -1,3 +1,4 @@
+/* the following pertains to the layout page */
 h1 {
     color: green;
 }
@@ -43,10 +44,6 @@ main {
     text-align: center;
 }
 
-#description {
-    text-align: justify;
-}
-
 footer {
     display: table;
     text-align: center;
@@ -57,4 +54,39 @@ footer {
 
 footer > a {
     display: block;
+}
+
+/* the following pertains to the index page */
+#description {
+    text-align: justify;
+}
+
+/* the following pertains to the menu page */
+.menu-item {
+    width: 80%;
+    height: 125px;
+    display: flex;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-left {
+    height: 100%;
+    width: 125px;
+    margin-right: 10px;
+}
+
+.menu-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: green;
 }

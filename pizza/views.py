@@ -26,7 +26,6 @@ def menu(request):
         "icecreams": icecreams,
         "cookies": cookies
     }
-    print(menu)
     return render(request, "pizza/menu.html", {
         "menu": menu
     })

@@ -6,5 +6,18 @@
 
 {% block body %}
     <h1 id="pizza-time">The Menu</h1>
-    daheck you wanna eat?
+    <div id="menu">
+        {% for pizza in menu.pizzas %}
+        <div class="menu-item">
+            <div class="menu-left">
+                <img class="menu-pic" src="static/pizza/images/{{pizza.pic}}" alt="">
+            </div>
+            <div class="menu-right">
+                <p class="menu-title">{{ pizza.title }}</p>
+                <p class="menu-description">{{ pizza.description }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
 {% endblock %}
