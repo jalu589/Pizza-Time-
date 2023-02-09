@@ -20,15 +20,21 @@ def menu(request):
     salads = Salad.objects.all()
     icecreams = IceCream.objects.all()
     cookies = Cookie.objects.all()
+    beverages = Beverage.objects.all()
     menu = {
         "pizzas": pizzas,
         "salads": salads,
         "icecreams": icecreams,
-        "cookies": cookies
+        "cookies": cookies,
+        "beverages": beverages
     }
     return render(request, "pizza/menu.html", {
         "menu": menu
     })
+
+
+def order(request):
+    return render(request, "pizza/order.html")
 
 
 def login_view(request):

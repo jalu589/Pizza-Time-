@@ -13,8 +13,82 @@
                 <img class="menu-pic" src="static/pizza/images/{{pizza.pic}}" alt="">
             </div>
             <div class="menu-right">
-                <p class="menu-title">{{ pizza.title }}</p>
+                <p class="menu-title">{{ pizza.title }} Pizza</p>
                 <p class="menu-description">{{ pizza.description }}</p>
+                <form action="">
+                    <select name="{{pizza.title}}-size">
+                        <option value="">(select one)</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+        {% for salad in menu.salads %}
+        <div class="menu-item">
+            <div class="menu-left">
+                <img class="menu-pic" src="static/pizza/images/{{salad.pic}}" alt="">
+            </div>
+            <div class="menu-right">
+                <p class="menu-title">{{ salad.title }} Salad</p>
+                <p class="menu-description">{{ salad.description }}</p>
+                <form action="">
+                    <select name="{{salad.title}}-size">
+                        <option value="">(select one)</option>
+                        <option value="Small">Small</option>
+                        <option value="Large">Large</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+        {% for icecream in menu.icecreams %}
+        <div class="menu-item">
+            <div class="menu-left">
+                <img class="menu-pic" src="static/pizza/images/{{icecream.pic}}" alt="">
+            </div>
+            <div class="menu-right">
+                <p class="menu-title">{{ icecream.title }}</p>
+                <p class="menu-description">{{ icecream.description }}</p>
+                <form action="">
+                    <select name="{{icecream.title}}-flavor">
+                        <option value="">(select one)</option>
+                        <option value="Vanilla">Vanilla</option>
+                        <option value="Chocolate">Chocolate</option>
+                        <option value="Strawberry">Strawberry</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+        {% for cookie in menu.cookies %}
+        <div class="menu-item">
+            <div class="menu-left">
+                <img class="menu-pic" src="static/pizza/images/{{cookie.pic}}" alt="">
+            </div>
+            <div class="menu-right">
+                <p class="menu-title">{{ cookie.title }} Cookie</p>
+                <p class="menu-description">{{ cookie.description }}</p>
+            </div>
+        </div>
+        {% endfor %}
+        {% for beverage in menu.beverages %}
+        <div class="menu-item">
+            <div class="menu-left">
+                <img class="menu-pic" src="static/pizza/images/{{beverage.pic}}" alt="">
+            </div>
+            <div class="menu-right">
+                <p class="menu-title">{{ beverage.title }}</p>
+                <p class="menu-description">{{ beverage.description }}</p>
+                <form action="">
+                    <select name="{{beverage.title}}-flavor">
+                        <option value="">(select one)</option>
+                        <option value="Individual">Individual</option>
+                        <option value="2L">2 Liter</option>
+                    </select>
+                </form>
             </div>
         </div>
         {% endfor %}

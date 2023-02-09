@@ -9,6 +9,10 @@ class User(AbstractUser):
     pass
 
 
+class Order(models.Model):
+    pass
+
+
 class Pizza(models.Model):
     title = models.CharField(max_length=32)
     pic = models.ImageField()
