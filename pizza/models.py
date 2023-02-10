@@ -10,7 +10,12 @@ class User(AbstractUser):
 
 
 class Order(models.Model):
-    pass
+    items = models.TextField()
+    payment = models.BooleanField()
+    delivery = models.BooleanField()
+    address = models.TextField(blank=True)
+    request = models.TextField(blank=True)
+    orderee = models.ForeignKey("User", on_delete=models.CASCADE, related_name="orders")
 
 
 class Pizza(models.Model):

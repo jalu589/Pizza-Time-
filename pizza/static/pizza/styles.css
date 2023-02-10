@@ -90,3 +90,17 @@ footer > a {
     margin-bottom: 10px;
     color: green;
 }
+
+.menu-description {
+    display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2;
+   -webkit-box-orient: vertical;
+}
+
+#build,
+.add {
+    border: solid 1px;
+    border-radius: 2px;
+    padding: 2px 5px;
+}

@@ -1,4 +1,5 @@
 {% extends "pizza/layout.html" %}
+{% load static %}
 
 {% block title %}
     The Menu
@@ -15,13 +16,28 @@
             <div class="menu-right">
                 <p class="menu-title">{{ pizza.title }} Pizza</p>
                 <p class="menu-description">{{ pizza.description }}</p>
-                <form action="">
+                <form class="menu-form" action="">
                     <select name="{{pizza.title}}-size">
                         <option value="">(select one)</option>
                         <option value="Small">Small</option>
                         <option value="Medium">Medium</option>
                         <option value="Large">Large</option>
                     </select>
+                    <select name="{{pizza.title}}-quantity">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                        <option value="1">6</option>
+                        <option value="1">7</option>
+                        <option value="1">8</option>
+                        <option value="1">9</option>
+                    </select>
+                    {% if pizza.title == "Build Your Own"%}
+                    <button id="build">Build</button>
+                    {% endif %}
+                    <input class="add" type="submit" value="Add">
                 </form>
             </div>
         </div>
@@ -34,12 +50,24 @@
             <div class="menu-right">
                 <p class="menu-title">{{ salad.title }} Salad</p>
                 <p class="menu-description">{{ salad.description }}</p>
-                <form action="">
+                <form class="menu-form" action="">
                     <select name="{{salad.title}}-size">
                         <option value="">(select one)</option>
                         <option value="Small">Small</option>
                         <option value="Large">Large</option>
                     </select>
+                    <select name="{{salad.title}}-quantity">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                        <option value="1">6</option>
+                        <option value="1">7</option>
+                        <option value="1">8</option>
+                        <option value="1">9</option>
+                    </select>
+                    <input class="add" type="submit" value="Add">
                 </form>
             </div>
         </div>
@@ -52,13 +80,25 @@
             <div class="menu-right">
                 <p class="menu-title">{{ icecream.title }}</p>
                 <p class="menu-description">{{ icecream.description }}</p>
-                <form action="">
+                <form class="menu-form" action="">
                     <select name="{{icecream.title}}-flavor">
                         <option value="">(select one)</option>
                         <option value="Vanilla">Vanilla</option>
                         <option value="Chocolate">Chocolate</option>
                         <option value="Strawberry">Strawberry</option>
                     </select>
+                    <select name="{{icecream.title}}-quantity">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                        <option value="1">6</option>
+                        <option value="1">7</option>
+                        <option value="1">8</option>
+                        <option value="1">9</option>
+                    </select>
+                    <input class="add" type="submit" value="Add">
                 </form>
             </div>
         </div>
@@ -71,6 +111,20 @@
             <div class="menu-right">
                 <p class="menu-title">{{ cookie.title }} Cookie</p>
                 <p class="menu-description">{{ cookie.description }}</p>
+                <form class="menu-form" action="">
+                    <select name="{{cookie.title}}-quantity">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                        <option value="1">6</option>
+                        <option value="1">7</option>
+                        <option value="1">8</option>
+                        <option value="1">9</option>
+                    </select>
+                    <input class="add" type="submit" value="Add">
+                </form>
             </div>
         </div>
         {% endfor %}
@@ -82,16 +136,31 @@
             <div class="menu-right">
                 <p class="menu-title">{{ beverage.title }}</p>
                 <p class="menu-description">{{ beverage.description }}</p>
-                <form action="">
+                <form class="menu-form" action="">
                     <select name="{{beverage.title}}-flavor">
                         <option value="">(select one)</option>
                         <option value="Individual">Individual</option>
                         <option value="2L">2 Liter</option>
                     </select>
+                    <select name="{{beverage.title}}-quantity">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                        <option value="1">6</option>
+                        <option value="1">7</option>
+                        <option value="1">8</option>
+                        <option value="1">9</option>
+                    </select>
+                    <input class="add" type="submit" value="Add">
                 </form>
             </div>
         </div>
         {% endfor %}
     </div>
+{% endblock %}
 
+{% block script %}
+    <script src="{% static 'pizza/menu.js' %}"></script>
 {% endblock %}
