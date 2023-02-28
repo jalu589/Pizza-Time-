@@ -28,6 +28,7 @@ def menu(request):
         "cookies": cookies,
         "beverages": beverages
     }
+    print(type(request.session))
     return render(request, "pizza/menu.html", {
         "menu": menu
     })
